@@ -13,10 +13,13 @@ int main()
     int target , index1 , index2;
     printf("Enter the target number : ");
     scanf("%d",&target);
-    if(target>=arr[n-1])
+    if(target<=arr[0])
     {
-        index1 = n-1;
-        printf("Closest number is %d",arr[index1]);
+    	printf("Closest number is %d",arr[0]);
+    }
+    else if(target>=arr[n-1])
+    {
+        printf("Closest number is %d",arr[n-1]);
     }
     else
     {
