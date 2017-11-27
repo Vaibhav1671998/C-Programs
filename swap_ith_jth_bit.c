@@ -6,6 +6,7 @@ int main()
     int i , j;
     printf("Enter the number whose bits is to be reversed : ");
     scanf("%d",&n);
+    int num = n;
     printf("Enter first position : ");
     scanf("%d",&i);
     printf("Enter second position : ");
@@ -15,6 +16,6 @@ int main()
         n = n ^ (1 << i);
         n = n ^ (1 << j);
     }
-    printf("%d\n",n);
+    printf("Now %d is %d\n",num,n);
     return 0;
 }
