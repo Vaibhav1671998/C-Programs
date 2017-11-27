@@ -8,37 +8,37 @@ typedef struct
 distance addDistances(distance *d1 , distance *d2)
 {
 	distance add;
-	while(d1->inches>=1000)
+	while(d1->inches>=12)
 	{
 		d1->feet++;
-		d1->inches -= 1000;
+		d1->inches -= 12;
 	}
-	while(d2->inches>=1000)
+	while(d2->inches>=12)
 	{
 		d2->feet++;
-		d2->inches -= 1000;
+		d2->inches -= 12;
 	}
 	add.feet = d1->feet + d2->feet;
 	add.inches = d1->inches + d2->inches;
-	while(add.inches>=1000)
+	while(add.inches>=12)
 	{
 		add.feet++;
-		add.inches -= 1000;
+		add.inches -= 12;
 	}
 	return add;
 }
 distance subtractDistances(distance *d1 , distance *d2)
 {
 	distance sub;
-	while(d1->inches>=1000)
+	while(d1->inches>=12)
 	{
 		d1->feet++;
-		d1->inches -= 1000;
+		d1->inches -= 12;
 	}
-	while(d2->inches>=1000)
+	while(d2->inches>=12)
 	{
 		d2->feet++;
-		d2->inches -= 1000;
+		d2->inches -= 12;
 	}
 	if(d1->feet > d2->feet)
 	{
@@ -60,7 +60,7 @@ distance subtractDistances(distance *d1 , distance *d2)
 	while(sub.inches<0)
 	{
 		sub.feet--;
-		sub.inches += 1000;
+		sub.inches += 12;
 	}
 	return sub;
 }
