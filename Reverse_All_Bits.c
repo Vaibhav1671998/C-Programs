@@ -13,6 +13,6 @@ int main()
         ans ^= num ^ (1 << i);
         n = n>>1;
     }
-    printf("%d\n",ans);
+    printf("After reversing all the bits %d is %d\n",num,ans);
     return 0;
 }
