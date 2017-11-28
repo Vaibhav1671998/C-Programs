@@ -21,9 +21,11 @@ int *findCount(char *str)
 int main()
 {
 	char *str = (char *)malloc(100 * sizeof(char));
+	printf("Enter a string : ");
 	scanf("%s",str);
 	int *fre = (int *)malloc(26 * sizeof(int));
 	fre = findCount(str);
+	printf("Frequency of all characters is : ")
 	for(int i=0;i<52;i++)
 	{
 		if(fre[i]!=0)
